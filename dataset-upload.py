@@ -23,14 +23,14 @@ example_inputs = [
 
 client = Client()
 # TODO: Fill in dataset id
-dataset_id = "a1228fb4-4d67-435a-9f0b-eeff415eb9c0"
+dataset_id = "ff712422-3a6b-4e8a-9334-4aa3ab19cb5f"
 
 # Prepare inputs and outputs for bulk creation
-inputs = [{"question": input_prompt} for input_prompt, _ in example_inputs]
-outputs = [{"output": output_answer} for _, output_answer in example_inputs]
+inputs = [{"Question": input_prompt} for input_prompt, _ in example_inputs]
+outputs = [{"Answer": output_answer} for _, output_answer in example_inputs]
 
 client.create_examples(
   inputs=inputs,
   outputs=outputs,
-  dataset_id=dataset_id,
+  dataset_id=str(dataset_id),
 )

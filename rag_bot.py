@@ -2,7 +2,6 @@ from langchain_community.vectorstores import FAISS
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_core.documents import Document
 from typing_extensions import List, TypedDict
-from langchain import hub
 from langgraph.graph import StateGraph, START, END
 from langchain_core.prompts import PromptTemplate
 from langsmith import evaluate, Client
