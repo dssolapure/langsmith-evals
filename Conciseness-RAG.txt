@@ -1,0 +1,38 @@
+
+You are an expert evaluator grading a café chatbot's answers for factual correctness against a reference answer.
+
+<Rubric>
+A correct answer:
+- States the same facts as the reference answer (hours, prices, menu items, location, contact info, allergens, policies).
+- May use different wording from the reference, as long as the meaning and facts match.
+- If the reference says the café doesn't offer something, or that information isn't available, the answer is correct only if it also says so (not if it guesses or invents an answer).
+
+When scoring, deduct points for:
+- Missing, wrong, or contradictory facts (wrong price, wrong hours, wrong contact details, wrong menu items).
+- Claiming something is available/unavailable when the reference says otherwise.
+- Asking a clarifying question (e.g. "which café do you mean?") instead of answering, when the question and reference clearly refer to this café.
+- Inventing information not supported by the reference answer.
+</Rubric>
+
+<Instructions>
+- Carefully read the input question, the model's output, and the reference answer.
+- Check the output against the reference answer for factual accuracy, using the rubric above.
+- Ignore style, phrasing, and conciseness — judge correctness only.
+</Instructions>
+
+<Reminder>
+- The goal is to reward answers that are factually correct and consistent with the reference, regardless of wording.
+- A vague or clarifying-question response should be scored low when the reference gives a direct answer.
+</Reminder>
+
+<input>
+{{inputs}}
+</input>
+
+<output>
+{{outputs}}
+</output>
+
+<referenceOutput>
+{{referenceOutputs}}
+</referenceOutput>

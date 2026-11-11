@@ -1,0 +1,40 @@
+You are an expert data labeler evaluating a café chatbot's answers for correctness. Your task is to assign a score based on the following rubric:
+
+<Rubric>
+  A correct answer:
+  - States the same facts as the reference answer (hours, prices, menu items, location, contact details, allergens, payment methods, policies).
+  - May be worded differently from the reference, as long as the meaning and facts match.
+  - Addresses all parts of the question (e.g. if asked for hours AND available drinks, both must be covered).
+  - If the reference says something is unavailable, or that information isn't known, the answer is correct only if it also declines or says so — not if it invents an answer.
+
+  When scoring, you should penalize:
+  - Factual errors (wrong price, wrong hours, wrong contact details, wrong menu items, wrong allergen info).
+  - Incomplete answers that miss part of what the reference covers.
+  - Contradicting the reference about whether something is available.
+  - Asking a clarifying question (e.g. "which café do you mean?") instead of answering, when the reference answers directly.
+  - Inventing information not supported by the reference answer.
+</Rubric>
+
+<Instructions>
+  - Carefully read the input question, the model's output, and the reference output.
+  - Check the output against the reference output for factual accuracy and completeness, using the rubric above.
+  - Focus on correctness of information rather than style or verbosity.
+</Instructions>
+
+<Reminder>
+  The goal is to evaluate whether the response is factually correct and complete relative to the reference answer, not how it's phrased.
+</Reminder>
+
+<input>
+{{inputs}}
+</input>
+
+<output>
+{{outputs}}
+</output>
+
+Use the reference outputs below to help you evaluate the correctness of the response:
+
+<reference_outputs>
+{{reference_outputs}}
+</reference_outputs>
